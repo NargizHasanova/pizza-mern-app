@@ -1,0 +1,296 @@
+[
+    {
+        "_id": "63f4852c0c3aa63db9a914c0",
+        "name": "Чикен Барбекю",
+        "category": "Куриные",
+        "priceB": 15,
+        "priceM": 14,
+        "priceS": 13,
+        "crust": [
+            "традиционное",
+            "тонкое"
+        ],
+        "size": [
+            26,
+            30,
+            40
+        ],
+        "img": "https://dodopizza.azureedge.net/static/Img/Products/f035c7f46c0844069722f2bb3ee9f113_584x584.jpeg",
+        "count": 0,
+        "__v": 0,
+        "salesNum": "3"
+    },
+    {
+        "_id": "63f4858a0c3aa63db9a914c2",
+        "name": "Пепперони с мясом",
+        "category": "Мясные",
+        "priceB": 18,
+        "priceM": 17,
+        "priceS": 16,
+        "crust": [
+            "традиционное",
+            "тонкое"
+        ],
+        "size": [
+            26,
+            30,
+            40
+        ],
+        "img": "https://dodopizza.azureedge.net/static/Img/Products/Pizza/ru-RU/1e1a6e80-b3ba-4a44-b6b9-beae5b1fbf27.jpg",
+        "count": 0,
+        "__v": 0,
+        "salesNum": "5"
+    },
+    {
+        "_id": "63f485ec0c3aa63db9a914c4",
+        "name": "Чикен Чизбургер",
+        "category": "Куриные",
+        "priceB": 14,
+        "priceM": 13,
+        "priceS": 12,
+        "crust": [
+            "традиционное",
+            "тонкое"
+        ],
+        "size": [
+            26,
+            30,
+            40
+        ],
+        "img": "https://dodopizza.azureedge.net/static/Img/Products/Pizza/ru-RU/6652fec1-04df-49d8-8744-232f1032c44b.jpg",
+        "count": 0,
+        "__v": 0,
+        "salesNum": "0"
+    },
+    {
+        "_id": "63f486140c3aa63db9a914c6",
+        "name": "Чикен Пармезан",
+        "category": "Куриные",
+        "priceB": 10,
+        "priceM": 9,
+        "priceS": 8,
+        "crust": [
+            "традиционное",
+            "тонкое"
+        ],
+        "size": [
+            26,
+            30,
+            40
+        ],
+        "img": "https://dodopizza.azureedge.net/static/Img/Products/Pizza/ru-RU/af553bf5-3887-4501-b88e-8f0f55229429.jpg",
+        "count": 0,
+        "__v": 0,
+        "salesNum": "0"
+    },
+    {
+        "_id": "63f486560c3aa63db9a914c8",
+        "name": "Маринера Мясная",
+        "category": "Мясные",
+        "priceB": 10,
+        "priceM": 9,
+        "priceS": 8,
+        "crust": [
+            "традиционное",
+            "тонкое"
+        ],
+        "size": [
+            26,
+            30,
+            40
+        ],
+        "img": "https://dodopizza-a.akamaihd.net/static/Img/Products/Pizza/ru-RU/b750f576-4a83-48e6-a283-5a8efb68c35d.jpg",
+        "count": 0,
+        "__v": 0,
+        "salesNum": "0"
+    },
+    {
+        "_id": "63f49b190c3aa63db9a914ca",
+        "name": "Чикен Рэнч",
+        "category": "Куриные",
+        "priceB": 10,
+        "priceM": 9,
+        "priceS": 8,
+        "crust": [
+            "традиционное",
+            "тонкое"
+        ],
+        "size": [
+            26,
+            30,
+            40
+        ],
+        "img": "https://dodopizza.azureedge.net/static/Img/Products/Pizza/ru-RU/2ffc31bb-132c-4c99-b894-53f7107a1441.jpg",
+        "count": 0,
+        "__v": 0,
+        "salesNum": "1"
+    },
+    {
+        "_id": "63f49b500c3aa63db9a914cc",
+        "name": "Вестерн Барбекю",
+        "category": "Мясные",
+        "priceB": 22,
+        "priceM": 21,
+        "priceS": 20,
+        "crust": [
+            "традиционное",
+            "тонкое"
+        ],
+        "size": [
+            26,
+            30,
+            40
+        ],
+        "img": "https://dodopizza.azureedge.net/static/Img/Products/Pizza/ru-RU/d2e337e9-e07a-4199-9cc1-501cc44cb8f8.jpg",
+        "count": 0,
+        "__v": 0,
+        "salesNum": "0"
+    },
+    {
+        "_id": "63f49b7c0c3aa63db9a914ce",
+        "name": "Мясная",
+        "category": "Мясные",
+        "priceB": 12,
+        "priceM": 11,
+        "priceS": 10,
+        "crust": [
+            "традиционное",
+            "тонкое"
+        ],
+        "size": [
+            26,
+            30,
+            40
+        ],
+        "img": "https://dodopizza.azureedge.net/static/Img/Products/Pizza/ru-RU/d48003cd-902c-420d-9f28-92d9dc5f73b4.jpg",
+        "count": 0,
+        "__v": 0,
+        "salesNum": "0"
+    },
+    {
+        "_id": "63f49b9b0c3aa63db9a914d0",
+        "name": "Вегетарианская",
+        "category": "Вегетерианские",
+        "priceB": 12,
+        "priceM": 11,
+        "priceS": 10,
+        "crust": [
+            "традиционное",
+            "тонкое"
+        ],
+        "size": [
+            26,
+            30,
+            40
+        ],
+        "img": "https://dodopizza.azureedge.net/static/Img/Products/Pizza/ru-RU/ec29465e-606b-4a04-a03e-da3940d37e0e.jpg",
+        "count": 0,
+        "__v": 0,
+        "salesNum": "4"
+    },
+    {
+        "_id": "63f49bcf0c3aa63db9a914d2",
+        "name": "Греческая",
+        "category": "Вегетерианские",
+        "priceB": 32,
+        "priceM": 31,
+        "priceS": 30,
+        "crust": [
+            "традиционное",
+            "тонкое"
+        ],
+        "size": [
+            26,
+            30,
+            40
+        ],
+        "img": "https://dodopizza.azureedge.net/static/Img/Products/Pizza/ru-RU/30367198-f3bd-44ed-9314-6f717960da07.jpg",
+        "count": 0,
+        "__v": 0,
+        "salesNum": "2"
+    },
+    {
+        "_id": "63f49c020c3aa63db9a914d4",
+        "name": "Острая Вегетарианская",
+        "category": "Вегетерианские",
+        "priceB": 15,
+        "priceM": 14,
+        "priceS": 13,
+        "crust": [
+            "традиционное",
+            "тонкое"
+        ],
+        "size": [
+            26,
+            30,
+            40
+        ],
+        "img": "https://dodopizza-a.akamaihd.net/static/Img/Products/Pizza/ru-RU/b750f576-4a83-48e6-a283-5a8efb68c35d.jpg",
+        "count": 0,
+        "__v": 0,
+        "salesNum": "0"
+    },
+    {
+        "_id": "63f49c2a0c3aa63db9a914d6",
+        "name": "Х энд Спайси",
+        "category": "Острые",
+        "priceB": 10,
+        "priceM": 9,
+        "priceS": 8,
+        "crust": [
+            "традиционное",
+            "тонкое"
+        ],
+        "size": [
+            26,
+            30,
+            40
+        ],
+        "img": "https://dodopizza-a.akamaihd.net/static/Img/Products/Pizza/ru-RU/b750f576-4a83-48e6-a283-5a8efb68c35d.jpg",
+        "count": 0,
+        "__v": 0,
+        "salesNum": "2"
+    },
+    {
+        "_id": "63f49c530c3aa63db9a914d8",
+        "name": "Острый Чикен Рэнч",
+        "category": "Острые",
+        "priceB": 15,
+        "priceM": 14,
+        "priceS": 13,
+        "crust": [
+            "традиционное",
+            "тонкое"
+        ],
+        "size": [
+            26,
+            30,
+            40
+        ],
+        "img": "https://dodopizza-a.akamaihd.net/static/Img/Products/Pizza/ru-RU/b750f576-4a83-48e6-a283-5a8efb68c35d.jpg",
+        "count": 0,
+        "__v": 0,
+        "salesNum": "0"
+    },
+    {
+        "_id": "63f49c750c3aa63db9a914da",
+        "name": "Американ Х",
+        "category": "Острые",
+        "priceB": 15,
+        "priceM": 14,
+        "priceS": 13,
+        "crust": [
+            "традиционное",
+            "тонкое"
+        ],
+        "size": [
+            26,
+            30,
+            40
+        ],
+        "img": "https://dodopizza-a.akamaihd.net/static/Img/Products/Pizza/ru-RU/b750f576-4a83-48e6-a283-5a8efb68c35d.jpg",
+        "count": 0,
+        "__v": 0,
+        "salesNum": "0"
+    }
+]
