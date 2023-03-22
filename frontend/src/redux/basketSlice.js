@@ -11,30 +11,20 @@ export const basketSlice = createSlice({
     initialState,
     reducers: {
         addToBasket: (state, { payload }) => {
-            
-            // state.pizzaBasket = [...state.pizzaBasket, payload]
+            const index = state.pizzaBasket.findIndex(bItem =>
+                bItem._id === payload._id
+                && bItem.size === payload.size
+                && bItem.crust === payload.crust
+            )
 
-            if(state.pizzaBasket.length === 0) {
+            if (index === -1) {
+                // bu o demekdiki basketde pizza 1 yoxdu 
                 state.pizzaBasket = [...state.pizzaBasket, payload]
-                return
+            } else {
+                // bu o demekdiki basketde
+                //  hemin  o pizza var 
+                state.pizzaBasket[index] = {...state.pizzaBasket[index] , count : payload.count }
             }
-
-            state.pizzaBasket.map((bItem) => {
-                // if (bItem._id !== payload._id) {  // bu pizza basketde yoxdu
-                //     console.log('bu pizza basketde yoxdu');
-                //     state.pizzaBasket = [...state.pizzaBasket, payload]
-                //     return
-                // }
-                if (bItem._id === payload._id) {  // bu pizza var basketde
-                    console.log('bu pizza var basketde');
-                    if (bItem.size !== payload.size || bItem.crust !== payload.crust) {
-                        state.pizzaBasket = [...state.pizzaBasket, payload]
-                        return
-                    }
-                    bItem.count = payload.count;
-                }
-                return bItem;
-            });
         },
     },
     extraReducers: {
