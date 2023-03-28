@@ -1,4 +1,4 @@
-iconfinder
+iconfinder,https://www.iconpacks.net/
 
 useDispatch возвращает нам функцию
 reducer это функция
@@ -9,3 +9,6 @@ const test = debounce( ()=> {
    console.log('hello');
 })
 bele yazanda her rerenderde funksiya tekrar cagirilir.Bunun qarwisini almaq ucun useCallback istifade ede bilerik. useCallback bize funksiya qaytarir useeffectden ferqli olaraq.Ve rerenderde artiq debounce funksiyasi tekrar cagirilmir
+
+
+window.scrollTo({ top: 0, behavior: 'smooth' })

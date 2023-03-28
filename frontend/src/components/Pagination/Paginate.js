@@ -1,10 +1,11 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import Pagination from '@mui/material/Pagination';
-import Stack from '@mui/material/Stack';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
+// import Pagination from '@mui/material/Pagination';
+// import Stack from '@mui/material/Stack';
+// import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { fetchPizzas } from '../../redux/pizzasSlice';
 import { useNavigate } from 'react-router-dom';
+import { Pagination, Stack, ThemeProvider, createTheme } from '@mui/material';
 
 const theme = createTheme({
     palette: {

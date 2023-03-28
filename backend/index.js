@@ -4,6 +4,7 @@ import cors from 'cors';
 import dotenv from 'dotenv'
 import cookieParser from "cookie-parser";
 import pizzaRoutes from "./routes/pizzaRoute.js"
+import usersRoutes from "./routes/usersRoute.js"
 
 const app = express()
 dotenv.config()
@@ -11,8 +12,10 @@ app.use(cors())
 app.use(cookieParser())
 app.use(express.json())
 
-// middlewares
+// routes
 app.use("/pizzas", pizzaRoutes)
+app.use("/user", usersRoutes)
+
 
 mongoose.set('strictQuery', false);
 

@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { getTotalCount, getTotalPrice, minusCount, plusCount, removeItem } from '../../redux/basketSlice';
 
 
 export const CartItem = ({
@@ -12,24 +13,22 @@ export const CartItem = ({
     price,
     salesNum,
 }) => {
-    const { pizzaBasket } = useSelector(state => state.basket)
     const dispatch = useDispatch();
+    
 
     const onClickPlus = (id) => {
-        // dispatch(onClickPlus(id))
+        console.log('plus');
+        dispatch(plusCount(id))
+       
     };
 
     const onClickMinus = (id) => {
-        // pizzaBasket.map(item => {
-        //     if (item._id === id) {
-        //         item.count -= 1;
-        //     }
-        //     return item;
-        // })
+        console.log('minus');
+        dispatch(minusCount(id))
     };
 
     const onClickRemove = () => {
-
+        dispatch(removeItem(_id))
     };
 
     return (
@@ -45,7 +44,7 @@ export const CartItem = ({
             </div>
             <div className="cart__item-count">
                 <button
-                    disabled={true}
+                    disabled={count === 1 ? true : false}
                     onClick={() => onClickMinus(_id)}
                     className="button button--outline button--circle cart__item-count-minus">
                     <svg
@@ -82,7 +81,7 @@ export const CartItem = ({
                 </button>
             </div>
             <div className="cart__item-price">
-                <b>{price} ₽</b>
+                <b>{price * count} AZN</b>
             </div>
             <div className="cart__item-remove">
                 <div onClick={onClickRemove} className="button button--outline button--circle">

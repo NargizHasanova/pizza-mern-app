@@ -55,13 +55,6 @@ export const pizzaSlice = createSlice({
         selectPizzaForModal: (state, { payload }) => {
             state.selectedPizza = state.pizzaData.find(pizza => pizza._id === payload)
         },
-        plusCount: (state, { payload }) => {
-            console.log(payload);
-        },
-        minusCount: (state, { payload }) => {
-            console.log(payload);
-            state.selectedPizza = state.pizzaData.find(pizza => pizza._id === payload)
-        },
     },
     extraReducers: {
         [fetchPizzas.pending]: (state) => {
@@ -93,6 +86,6 @@ export const pizzaSlice = createSlice({
     }
 })
 
-export const { getPizzaBySort, paginateTofirst, setPizzaModal, selectPizzaForModal, minusCount, plusCount } = pizzaSlice.actions
+export const { getPizzaBySort, paginateTofirst, setPizzaModal, selectPizzaForModal } = pizzaSlice.actions
 
 export default pizzaSlice.reducer

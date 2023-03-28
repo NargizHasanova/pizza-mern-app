@@ -1,0 +1,33 @@
+.auth-form {
+    .paper {
+        margin-top: 64px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 16px;
+    }
+
+    .avatar {
+        margin: 8px;
+        background-color: #FE5F1E;
+    }
+
+    .form {
+        width: 100%;
+        margin-top: 24px;
+        .input:focus{
+            border-color: #FE5F1E !important;
+        }
+        label:focus{
+            color: #FE5F1E !important;
+        }
+    }
+
+    .submit{
+        margin: 24px 0px 16px;
+        background-color: #FE5F1E;
+        &:hover{
+            background-color: #f24701;
+        }
+    }
+}

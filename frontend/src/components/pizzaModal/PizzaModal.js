@@ -2,9 +2,10 @@ import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { setPizzaModal } from '../../redux/pizzasSlice';
 import { addToBasket } from '../../redux/basketSlice';
-import Box from '@mui/material/Box';
-import Modal from '@mui/material/Modal';
+// import Box from '@mui/material/Box';
+// import Modal from '@mui/material/Modal';
 import "./PizzaModal.scss"
+import { Box, Modal } from '@mui/material';
 
 const style = {
     position: 'absolute',

@@ -1,12 +1,37 @@
-import React from 'react'
-import './header.scss'
+import React, { useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { Search } from '../search/Search';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { Button } from '@mui/material';
+import signin from "../../assets/img/sign.svg"
+import decode from 'jwt-decode';
+import './header.scss'
+import { logout } from '../../redux/userSlice';
 
 export default function Header() {
+  const dispatch = useDispatch()
   const location = useLocation();
   const { pizzaBasket } = useSelector(state => state.basket)
+  const { user } = useSelector((state) => state.users);
+
+  // user.name = Nargiz Hasanova
+  const userName = user ? user.name.split(" ")[0].charAt(0) : ""
+
+  const logOut = () => {
+    dispatch(logout());
+  };
+
+  useEffect(() => {
+    const token = user?.token;
+
+    if (token) {
+      const decodedToken = decode(token);
+      // tokenin vaxti expire olubsa logOut etsin
+      if (decodedToken.exp * 1000 < new Date().getTime()) {
+        logout()
+      }
+    }
+  }, []);
 
   return (
     <div className="header">
@@ -22,6 +47,18 @@ export default function Header() {
         </Link>
         {location.pathname !== '/cart' && <Search />}
         <div className="header__cart">
+
+          {user
+            ?
+            <h2 className='userName'>{userName}</h2>
+            :
+            <Link to="/auth">
+              <button className='signin-btn'>
+                <img src={signin} alt="sign-in" />
+              </button>
+            </Link>
+          }
+
           <Link to="/cart" className="button button--cart">
             <svg
               width="18"
@@ -53,8 +90,11 @@ export default function Header() {
               />
             </svg>
             <span>{pizzaBasket.length}</span>
-            {/* sert qoyki 1den azdisa span gorsenmesin hec */}
           </Link>
+
+          {user &&
+            <button className='logout' onClick={logOut}>Logout</button>
+          }
         </div>
       </div>
     </div>
