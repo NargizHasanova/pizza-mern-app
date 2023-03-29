@@ -2,8 +2,6 @@ import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { setPizzaModal } from '../../redux/pizzasSlice';
 import { addToBasket } from '../../redux/basketSlice';
-// import Box from '@mui/material/Box';
-// import Modal from '@mui/material/Modal';
 import "./PizzaModal.scss"
 import { Box, Modal } from '@mui/material';
 
@@ -23,8 +21,10 @@ export default function PizzaModal() {
     const dispatch = useDispatch()
     const { pizzaModal, selectedPizza } = useSelector(state => state.pizzas)
     const { pizzaBasket } = useSelector(state => state.basket)
-    console.log(pizzaBasket);
+    const { user } = useSelector((state) => state.users);
 
+
+    console.log('');
     // PIZZA CRUST
     const crust = ["тонкое", "традиционное"]
     const [crustIndex, setCrustIndex] = useState(0) // css ucun yaratmisiq
@@ -76,7 +76,7 @@ export default function PizzaModal() {
             size: currSize,
             count: pizzaCount,
             price: pizzaPriceBySize,
-            salesNum: 0
+            salesNum: 0,
         }))
 
         setCrustIndex(0)

@@ -12,3 +12,7 @@ bele yazanda her rerenderde funksiya tekrar cagirilir.Bunun qarwisini almaq ucun
 
 
 window.scrollTo({ top: 0, behavior: 'smooth' })
+
+qalan isler: userin api nen isleyeceksen admin panel yaradanda,ordan gelen userin id-si ve orderListi lazim olacaq esas
+
+admin panelde ise orderListden tamamlanan sifarisleri silmek

@@ -1,6 +1,6 @@
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
-import UserModal from "../models/user.js";
+import UserModal from "../models/User.js";
 
 const secret = 'test';
 
@@ -75,6 +75,49 @@ export const signup = async (req, res) => {
         res.status(500).json({
             message: 'Не удалось зарегистрироваться',
         });
+    }
+}
+
+export const sendOrder = async (req, res) => {
+    try {
+        const { userId } = req.params
+        const order = req.body
+        // order = [
+        //     {
+        //         _id: '63f4858a0c3aa63db9a914c2',
+        //         name: 'Пепперони с мясом',
+        //         img: 'https://dodopizza.azureedge.net/static/Img/Products/Pizza/ru-RU/1e1a6e80-b3ba-4a44-b6b9-beae5b1fbf27.jpg',
+        //         crust: 'тонкое',
+        //         size: '26',
+        //         count: 1,
+        //         price: 16,
+        //         salesNum: 0
+        //     },
+        //     {
+        //         _id: '63f485ec0c3aa63db9a914c4',
+        //         name: 'Чикен Чизбургер',
+        //         img: 'https://dodopizza.azureedge.net/static/Img/Products/Pizza/ru-RU/6652fec1-04df-49d8-8744-232f1032c44b.jpg',
+        //         crust: 'тонкое',
+        //         size: '26',
+        //         count: 1,
+        //         price: 12,
+        //         salesNum: 0
+        //     }
+        // ]
+        const user = await UserModal.findById(userId)
+
+        user.orderList.push(...order);
+
+        const updatedFavList = await UserModal.findByIdAndUpdate(
+            userId,
+            user,
+            { new: true }
+        );
+        res.status(200).json(updatedFavList);
+
+    } catch (err) {
+        console.log(req.params.userId);
+        res.status(404).json(err)
     }
 }
 

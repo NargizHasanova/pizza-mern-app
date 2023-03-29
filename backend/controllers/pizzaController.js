@@ -76,7 +76,3 @@ export const getPizzasBySearch = async (req, res) => {
     }
 }
 
-// To add pizza to a basket in a MERN (MongoDB, Express, React, Node.js) stack application similar to Papa John's app
-
-// Salam. Papa johns saytdaki kimi pizzalari baskete elave etmek isteyirem. Meselen pizza1 elave edirem ve sonra tekrar pizza1 elave ediremse basketde pizza1 birdefe elave olunsun, sayini 2 yazsin sadece.
-//Ama meselen evvel pizza1 elave ediremse "26sm" oluculu ve sonra tekrar pizza1 elave ediremse ama basqa olucde(meselen "40sm") o zaman basketde iki pizza gostersin.pizza1 "26sm" ve pizza1 "40sm".Bunun alqoritmini nece yazmaq olar?

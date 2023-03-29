@@ -51,7 +51,6 @@ export const basketSlice = createSlice({
         clearBasket: (state, { payload }) => {
             state.pizzaBasket = []
         },
-
     },
     extraReducers: {
 

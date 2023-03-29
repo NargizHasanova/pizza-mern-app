@@ -1,13 +1,16 @@
-import React, { useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import { CartItem } from '../components/cartItem/CartItem';
 import { useDispatch, useSelector } from 'react-redux';
 import EmptyBasket from './emptyBasket/EmptyBasket';
 import { clearBasket } from '../redux/basketSlice';
+import { sendOrder } from '../redux/userSlice';
 
 const Cart = () => {
   const dispatch = useDispatch()
   const { pizzaBasket } = useSelector(state => state.basket)
+  const { user } = useSelector((state) => state.users);
+  const navigate = useNavigate()
 
   const pizzaTotalCount = pizzaBasket.reduce((acc, item) => acc + item.count, 0)
   const pizzaTotalPrice = pizzaBasket.reduce((acc, item) => acc + (item.price * item.count), 0)
@@ -18,7 +21,11 @@ const Cart = () => {
   };
 
   const orderPizza = () => {
-
+    dispatch(sendOrder({
+      userId: user._id,
+      order: pizzaBasket,
+      navigate: navigate
+    }))
   };
 
   return (

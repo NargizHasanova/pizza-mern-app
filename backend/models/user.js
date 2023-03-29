@@ -15,6 +15,20 @@ const userSchema = mongoose.Schema({
         required: true
     },
     id: { type: String },
+    // orderList: [
+    //     {
+    //         name: String,
+    //         crust: String,
+    //         size: String,
+    //         count: Number,
+    //         price: Number,
+    //         salesNum: Number,
+    //     }
+    // ],
+    orderList: {
+        type: Array,
+        default: []
+    },
 });
 
 export default mongoose.model("User", userSchema);

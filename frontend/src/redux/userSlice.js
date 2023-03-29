@@ -19,6 +19,14 @@ export const signUp = createAsyncThunk("users/fetchRegister",
     }
 )
 
+export const sendOrder = createAsyncThunk("user/sendOrder",
+    async ({ userId, order, navigate }) => { // params = { userId, order }
+        const { data } = await Axios.post(`user/sendOrder/${userId}`, order)
+        navigate('/');
+        return data
+    }
+)
+
 const initialState = {
     user: null,
 }
@@ -48,7 +56,12 @@ export const userSlice = createSlice({
         },
         [signUp.fulfilled]: (state, { payload }) => {
             state.user = payload
+        },
+        [sendOrder.fulfilled]: (state, { payload }) => {
+            console.log(payload);
+            console.log('order has been sent successfully');
         }
+
     }
 })
 
